@@ -1,0 +1,60 @@
+.c-form {
+    width: 400px;
+    display: block;
+    background-color: lightblue;
+    padding: 20px;
+    margin: 35px auto 0 auto;
+
+    $b: &;
+
+    &__field {
+        width: 100%;
+        background-color: lightgreen;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        &--last {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        display: block;
+        color: black;
+        padding-bottom: 5px;
+
+        #{$b}--labels-right & {
+            text-align: right;
+        }
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        background-color: white;
+        border: 1px solid black;
+        padding: 5px 10px;
+    }
+    &__textarea {
+        display: block;
+        width: 100%;
+        background-color: white;
+        border: 1px solid black;
+        padding: 5px 10px;
+        height: 100px;
+        resize: none;
+    }
+
+    &__submit {
+        width: 100%;
+        border: 1px solid darkgray;
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        background-color: darkgray;
+        padding: 8px 10px;
+        min-width: 100px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
