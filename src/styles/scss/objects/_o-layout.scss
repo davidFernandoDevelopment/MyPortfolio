@@ -1,7 +1,7 @@
 /* ---------------- LAYOUT (BASE) ---------------- */
 
 .o-layout-container {
-    max-width: 968px;
+    max-width: 768px;
 
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -19,6 +19,7 @@
 
 .o-layout-grid {
     display: grid;
+    gap: 1.5rem;
 }
 
 /* ---------------- LAYOUT (BASE) ---------------- */

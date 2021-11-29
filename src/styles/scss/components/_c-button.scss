@@ -1,0 +1,33 @@
+.c-button {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: var(--font-medium);
+    background-color: var(--first-color);
+    color: #fff;
+
+    &:hover {
+        background-color: var(--first-color-alt);
+    }
+
+    &__icon {
+        font-size: 1.25rem;
+        margin-left: var(--mb-0-5);
+    }
+
+    &--small {
+        padding: 0.75rem 1rem;
+    }
+
+    &--link {
+        padding: 0;
+        background-color: transparent;
+        caret-color: var(--first-color);
+
+        &:hover {
+            color: var(--first-color-alt);
+        }
+    }
+}

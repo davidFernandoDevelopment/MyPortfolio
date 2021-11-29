@@ -16,10 +16,14 @@
 
 // OBJECTS
 @import "objects/o-layout";
+@import "objects/o-section";
 
 // COMPONENTS
 @import "components/nav-menu";
 @import "components/header";
+@import "components/c-home";
+@import "components/c-button";
+@import "components/c-main";
 
 // UTILITIES
 @import "utilities/u-utilities";

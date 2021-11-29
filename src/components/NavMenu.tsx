@@ -11,6 +11,7 @@ const items: IDataLinkNav[] = [
 		href: '#home',
 		title: 'Inicio',
 		icon: 'estate',
+		default: true,
 	},
 	{
 		href: '#about',
@@ -57,14 +58,18 @@ const NavMenu = ({ isShow, fnShow }: IProps) => {
 						onClick={hiddenNavMenu}>
 						<a
 							href={`#${item.href}`}
-							className='c-nav-menu__link js-nav-link active-link'>
+							className={`c-nav-menu__link ${
+								item?.default ? 'active-link' : ''
+							}`}>
 							<i className={`c-nav-menu__icon uil uil-${item.icon}`}></i>
 							{item.title}
 						</a>
 					</li>
 				))}
 			</ul>
-			<i className='uil uil-times c-nav-menu__close' onClick={hiddenNavMenu}></i>
+			<i
+				className='uil uil-times c-nav-menu__close'
+				onClick={hiddenNavMenu}></i>
 		</nav>
 	);
 };

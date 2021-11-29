@@ -1,0 +1,9 @@
+.c-main {
+    @include from(lg) {
+        padding: 0 1rem;
+    }
+
+    @include from(xl) {
+        padding: 0;
+    }
+}

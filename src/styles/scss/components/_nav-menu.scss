@@ -15,7 +15,7 @@
     }
 
     @include from(sm) {
-        padding: 2rem 0.25rem 4rem;
+        padding: 2rem 1.5rem 4rem;
     }
 
     @include from(lg) {
@@ -55,6 +55,10 @@
         font-weight: var(--font-medium);
 
         &:hover {
+            color: var(--first-color);
+        }
+
+        &.active-link {
             color: var(--first-color);
         }
     }

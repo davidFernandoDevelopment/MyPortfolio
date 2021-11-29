@@ -1,0 +1,124 @@
+.c-home {
+    &__container {
+    }
+
+    &__content {
+        grid-template-columns: 0.25fr 3fr;
+        padding-top: 0.5rem;
+
+        @include from(sm) {
+            grid-template-columns: 0.5fr 3fr;
+            padding-top: 3.5rem;
+            align-items: center;
+        }
+
+        @include from(md) {
+            grid-template-columns: max-content 1fr 1fr;
+        }
+
+        @include from(lg) {
+            padding-top: 5.5rem;
+            column-gap: 2rem;
+        }
+    }
+
+    &__social {
+        display: grid;
+        grid-template-columns: max-content;
+        row-gap: 1rem;
+
+        &-icon {
+            font-size: 1.54rem;
+            color: var(--first-color);
+
+            &:hover {
+                color: var(--first-color-alt);
+            }
+        }
+
+        @include from(xl) {
+            transform: translateX(-6rem);
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+    }
+    &__blob {
+        width: 180px;
+        fill: var(--first-color);
+
+        &-img {
+            width: 250px;
+        }
+
+        @include from(sm) {
+            width: 200px;
+        }
+
+        @include from(lg) {
+            width: 270px;
+        }
+
+        @include from(xl) {
+            width: 320px;
+        }
+    }
+
+    &__data {
+        grid-column: span 2;
+
+        @include from(md) {
+            grid-area: 1 / 2;
+        }
+    }
+    &__title {
+        font-size: var(--big-font-size);
+    }
+    &__subtitle {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        color: var(--text-color);
+        margin-bottom: var(--mb-0-75);
+    }
+    &__description {
+        margin-bottom: var(--mb-2);
+    }
+
+    &__scroll {
+        display: none;
+        grid-column: span 2;
+
+        &-button {
+            display: flex;
+            align-items: center;
+            color: var(--first-color);
+            transition: 0.5s;
+
+            &:hover {
+                transform: translateY(0.25rem);
+            }
+        }
+
+        &-mouse {
+            font-size: 2rem;
+        }
+
+        &-name {
+            font-size: var(--small-font-size);
+            color: var(--title-color);
+            font-weight: var(--font-medium);
+            margin-right: var(--mb-0-25);
+        }
+
+        &-arrow {
+            font-size: 1.25rem;
+        }
+
+        @include from(lg) {
+            display: block;
+            grid-column: 2;
+        }
+    }
+}
