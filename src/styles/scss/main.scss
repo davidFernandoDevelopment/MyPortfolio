@@ -19,11 +19,12 @@
 @import "objects/o-section";
 
 // COMPONENTS
-@import "components/nav-menu";
-@import "components/header";
+@import "components/c-nav-menu";
+@import "components/c-header";
 @import "components/c-home";
 @import "components/c-button";
 @import "components/c-main";
+@import "components/c-about";
 
 // UTILITIES
 @import "utilities/u-utilities";

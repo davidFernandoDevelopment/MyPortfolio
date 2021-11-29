@@ -1,0 +1,71 @@
+.c-about {
+    &__container {
+        @include from(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include from(lg) {
+            column-gap: 5rem;
+        }
+    }
+
+    &__img {
+        border-radius: 0.5rem;
+        object-fit: cover;
+        width: 200px;
+        justify-self: center;
+
+        @include from(sm) {
+            width: 350px;
+        }
+
+        @include from(md) {
+            height: 70%;
+            width: 100%;
+        }
+    }
+
+    &__data {
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: var(--mb-2-5);
+
+        @include from(lg) {
+            text-align: initial;
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: var(--mb-2-5);
+
+        &-title {
+            font-size: var(--h2-font-size);
+            font-weight: var(--font-semi-bold);
+        }
+
+        &-name {
+            font-size: var(--smaller-font-size);
+        }
+
+        &-title,
+        &-name {
+            display: block;
+            text-align: center;
+        }
+
+        @include from(lg) {
+            justify-content: space-between;
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+
+        @include from(lg) {
+            justify-content: initial;
+        }
+    }
+}

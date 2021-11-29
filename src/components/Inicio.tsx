@@ -9,7 +9,7 @@ const socials: ISocial[] = [
 
 const Inicio = () => {
 	return (
-		<section className='c-home o-layout-section'>
+		<section id='home' className='c-home o-layout-section'>
 			<div className='c-home__container o-layout-container'>
 				<div className='c-home__content o-layout-grid'>
 					<ul className='c-home__social'>
@@ -59,7 +59,7 @@ const Inicio = () => {
 							distinctio beatae ea ipsum facilis adipisci expedita quaerat
 							quibusdam dolorum.
 						</p>
-						<a href='/#' className='c-button'>
+						<a href='#about' className='c-button'>
 							Contáctame
 							<i className='uil uil-message c-button__icon'></i>
 						</a>

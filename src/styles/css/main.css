@@ -414,3 +414,54 @@ button {
 @media screen and (min-width: 1024px) {
   .c-main {
     padding: 0; } }
+
+@media screen and (min-width: 568px) {
+  .c-about__container {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (min-width: 768px) {
+  .c-about__container {
+    column-gap: 5rem; } }
+
+.c-about__img {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  width: 200px;
+  justify-self: center; }
+  @media screen and (min-width: 350px) {
+    .c-about__img {
+      width: 350px; } }
+  @media screen and (min-width: 568px) {
+    .c-about__img {
+      height: 70%;
+      width: 100%; } }
+
+.c-about__description {
+  text-align: center;
+  margin-bottom: var(--mb-2-5); }
+  @media screen and (min-width: 768px) {
+    .c-about__description {
+      text-align: initial; } }
+
+.c-about__info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2-5); }
+  .c-about__info-title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold); }
+  .c-about__info-name {
+    font-size: var(--smaller-font-size); }
+  .c-about__info-title, .c-about__info-name {
+    display: block;
+    text-align: center; }
+  @media screen and (min-width: 768px) {
+    .c-about__info {
+      justify-content: space-between; } }
+
+.c-about__buttons {
+  display: flex;
+  justify-content: center; }
+  @media screen and (min-width: 768px) {
+    .c-about__buttons {
+      justify-content: initial; } }
