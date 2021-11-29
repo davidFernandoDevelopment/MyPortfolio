@@ -1,48 +1,70 @@
+import { useRef } from 'react';
+import { IDataLinkNav } from '../interfaces/IDataLinkNav';
+
 interface IProps {
 	isShow: boolean;
+	fnShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const NavMenu = ({ isShow }: IProps) => {
+const items: IDataLinkNav[] = [
+	{
+		href: '#home',
+		title: 'Inicio',
+		icon: 'estate',
+	},
+	{
+		href: '#about',
+		title: 'Acerca de mí',
+		icon: 'user',
+	},
+	{
+		href: '#skills',
+		title: 'Skills',
+		icon: 'file-alt',
+	},
+	{
+		href: '#services',
+		title: 'Servicios',
+		icon: 'briefcase-alt',
+	},
+	{
+		href: '#portfolio',
+		title: 'Portfolio',
+		icon: 'scenery',
+	},
+	{
+		href: '#contact',
+		title: 'Contáctame',
+		icon: 'message',
+	},
+];
+
+const NavMenu = ({ isShow, fnShow }: IProps) => {
+	const navMenu = useRef<HTMLElement>(null);
+
+	const hiddenNavMenu = (): void => {
+		navMenu.current?.classList.remove('is-show');
+		fnShow(false);
+	};
+
 	return (
-		<nav className={`c-nav-menu ${isShow ? 'is-show' : ''}`}>
+		<nav ref={navMenu} className={`c-nav-menu ${isShow ? 'is-show' : ''}`}>
 			<ul className='c-nav-menu__list o-layout-grid'>
-				<li className='c-nav-menu__item'>
-					<a href='#home' className='c-nav-menu__link js-nav-link active-link'>
-						<i className='c-nav-menu__icon uil uil-estate'></i>
-						Inicio
-					</a>
-				</li>
-				<li className='c-nav-menu__item'>
-					<a href='#about' className='c-nav-menu__link js-nav-link'>
-						<i className='c-nav-menu__icon uil uil-user'></i>
-						Acerca de mí
-					</a>
-				</li>
-				<li className='c-nav-menu__item'>
-					<a href='#skills' className='c-nav-menu__link js-nav-link'>
-						<i className='c-nav-menu__icon uil uil-file-alt'></i>
-						Skills
-					</a>
-				</li>
-				<li className='c-nav-menu__item'>
-					<a href='#services' className='c-nav-menu__link js-nav-link'>
-						<i className='c-nav-menu__icon uil uil-briefcase-alt'></i>
-						Servicios
-					</a>
-				</li>
-				<li className='c-nav-menu__item'>
-					<a href='#portfolio' className='c-nav-menu__link js-nav-link'>
-						<i className='c-nav-menu__icon uil uil-scenery'></i>
-						Portfolio
-					</a>
-				</li>
-				<li className='c-nav-menu__item'>
-					<a href='#contact' className='c-nav-menu__link js-nav-link'>
-						<i className='c-nav-menu__icon uil uil-message'></i>
-						Contáctame
-					</a>
-				</li>
+				{items.map((item) => (
+					<li
+						key={item.href}
+						className='c-nav-menu__item'
+						onClick={hiddenNavMenu}>
+						<a
+							href={`#${item.href}`}
+							className='c-nav-menu__link js-nav-link active-link'>
+							<i className={`c-nav-menu__icon uil uil-${item.icon}`}></i>
+							{item.title}
+						</a>
+					</li>
+				))}
 			</ul>
+			<i className='uil uil-times c-nav-menu__close' onClick={hiddenNavMenu}></i>
 		</nav>
 	);
 };

@@ -5,9 +5,7 @@ import NavMenu from './NavMenu';
 const Header = () => {
 	const [toggle, setToggle] = useState(false);
 
-	const toggleMenu = () => {
-		setToggle((prev) => !prev);
-	};
+	const toggleMenu = (): void => setToggle(true);
 
 	return (
 		<header className='c-header'>
@@ -15,7 +13,7 @@ const Header = () => {
 				<a href='/#' className='c-header__logo'>
 					David Fernando
 				</a>
-				<NavMenu isShow={toggle} />
+				<NavMenu isShow={toggle} fnShow={setToggle} />
 				<div className='c-header__buttons'>
 					<i className='uil uil-moon c-header__theme'></i>
 					<div className='c-header__toggle' onClick={toggleMenu}>
@@ -28,4 +26,3 @@ const Header = () => {
 };
 
 export default Header;
-

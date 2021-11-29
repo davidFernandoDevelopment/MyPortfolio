@@ -212,6 +212,18 @@ button {
     @media screen and (min-width: 768px) {
       .c-nav-menu__icon {
         display: none; } }
+  .c-nav-menu__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color); }
+    .c-nav-menu__close:hover {
+      color: var(--first-color-alt); }
+    @media screen and (min-width: 768px) {
+      .c-nav-menu__close {
+        display: none; } }
 
 .c-header {
   position: fixed;
