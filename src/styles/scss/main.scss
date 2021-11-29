@@ -15,13 +15,11 @@
 @import "keyframes/keyframes";
 
 // OBJECTS
-@import "objects/o-text-align";
+@import "objects/o-layout";
 
 // COMPONENTS
-@import "components/c-app";
-@import "components/c-form";
-@import "components/c-button";
-@import "components/c-modal";
+@import "components/nav-menu";
+@import "components/header";
 
 // UTILITIES
 @import "utilities/u-utilities";

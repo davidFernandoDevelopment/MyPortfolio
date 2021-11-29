@@ -1,10 +1,9 @@
-import Form from './components/Form';
-// import Initial from './components/Initial';
+import Header from './components/Header';
 
 function App() {
 	return (
 		<>
-			<Form />
+			<Header />
 		</>
 	);
 }
