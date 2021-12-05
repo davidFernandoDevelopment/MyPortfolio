@@ -76,11 +76,11 @@
     &__title {
         font-size: var(--big-font-size);
     }
-    &__subtitle {
-        font-size: var(--h3-font-size);
-        font-weight: var(--font-medium);
+     &__subtitle {
+    //     font-size: var(--h3-font-size);
+    //     font-weight: var(--font-medium);
         color: var(--text-color);
-        margin-bottom: var(--mb-0-75);
+        margin-bottom: var(--mb-1);
     }
     &__description {
         margin-bottom: var(--mb-2);

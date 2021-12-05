@@ -1,7 +1,7 @@
 /* ---------------- LAYOUT (BASE) ---------------- */
 
 .o-layout-container {
-    max-width: 768px;
+    max-width: var(--max-width);
 
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -17,9 +17,39 @@
     }
 }
 
+.o-layout-section {
+    padding: 2rem 0 4rem;
+
+    &__title {
+        font-size: var(--h1-font-size);
+        text-align: center;
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: var(--small-font-size);
+        margin-bottom: var(--mb-3);
+        text-align: center;
+
+        @include from(lg) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    @include from(lg) {
+        padding: 6rem 0 2rem;
+    }
+}
+
 .o-layout-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: var(--gutter);
+}
+
+@for $i from 1 through 20 {
+    .o-layout-w-#{$i * 5 } {
+        width: $i * 5%;
+    }
 }
 
 /* ---------------- LAYOUT (BASE) ---------------- */

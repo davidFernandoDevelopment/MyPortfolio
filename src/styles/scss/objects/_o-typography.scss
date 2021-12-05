@@ -1,0 +1,50 @@
+// Assign heading styles
+.o-big-title {
+    @include big-title;
+}
+.o-h1 {
+    @include t1;
+}
+.o-h2 {
+    @include t2;
+}
+.o-h3 {
+    @include t3;
+}
+.o-h4 {
+    @include t4;
+}
+.o-h5 {
+    @include t5;
+}
+.o-h6 {
+    @include t6;
+}
+
+// Assign text content styles
+.o-biggest {
+    @include biggest;
+}
+.o-bigger {
+    @include bigger;
+}
+.o-big {
+    @include big;
+}
+.o-normal {
+    @include normal;
+}
+.o-small {
+    @include small;
+}
+.o-smaller {
+    @include smaller;
+}
+
+// Classes for font family
+.o-body-font {
+    font-family: var(--body-font);
+}
+.o-heading-font {
+    font-family: var(--heading-font);
+}

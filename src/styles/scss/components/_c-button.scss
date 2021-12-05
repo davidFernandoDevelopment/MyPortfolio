@@ -24,9 +24,10 @@
     &--link {
         padding: 0;
         background-color: transparent;
-        caret-color: var(--first-color);
+        color: var(--first-color);
 
         &:hover {
+            background-color: transparent;
             color: var(--first-color-alt);
         }
     }

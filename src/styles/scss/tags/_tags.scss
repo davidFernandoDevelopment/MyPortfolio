@@ -5,25 +5,39 @@ html {
 }
 
 body {
-    margin: 0 0 var(--header-height) 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
+    @include normal;
     color: var(--text-color);
+
+    margin: 0 0 var(--header-height) 0;
+    background-color: var(--body-color);
 
     @include from(lg) {
         margin: 0;
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h1 {
+    @include t1;
+}
+
+h2 {
+    @include t2;
+}
+
+h3 {
+    @include t3;
+}
+
+h4 {
+    @include t4;
+}
+
+h5 {
+    @include t5;
+}
+
 h6 {
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
+    @include t6;
 }
 
 ul {

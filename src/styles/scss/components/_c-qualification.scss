@@ -1,0 +1,33 @@
+.c-qualification {
+    &__container {
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: var(--mb-2);
+
+        @include from(lg) {
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--first-color);
+        }
+
+        @include from(lg) {
+            margin: 0 var(--mb-1-5);
+        }
+    }
+
+    &__icon {
+        font-size: 1.8rem;
+        margin-right: var(--mb-0-25);
+    }
+}

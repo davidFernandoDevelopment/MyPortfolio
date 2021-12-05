@@ -1,9 +1,13 @@
 // SETTINGS
 @import "settings/settings";
 
-// TOOLS (FUNC - MIXINS)
+// TOOLS (MIXINS)
 @import "tools/functions";
 @import "tools/mixins";
+
+// THEMES (TYPOGRAPHY AND COLORS)
+@import "theme/typography";
+@import "theme/darktheme";
 
 // GENERIC
 @import "generic/generic";
@@ -16,7 +20,7 @@
 
 // OBJECTS
 @import "objects/o-layout";
-@import "objects/o-section";
+@import "objects/o-typography";
 
 // COMPONENTS
 @import "components/c-nav-menu";
@@ -25,6 +29,12 @@
 @import "components/c-button";
 @import "components/c-main";
 @import "components/c-about";
+@import "components/c-skills";
+//Accordion
+@import "components/c-accordion";
+@import "components/c-panel";
+//Accordion
+@import "components/c-qualification";
 
 // UTILITIES
 @import "utilities/u-utilities";
